@@ -1,0 +1,129 @@
+{
+  "project": {
+    "name": "Plataforma Academica",
+    "subtitle": "Chatbot WhatsApp para Servicos Academicos",
+    "team_size": 6,
+    "date": "2026-05-01"
+  },
+  "metrics": {
+    "total_stories": 47,
+    "total_sp": 233,
+    "sp_done": 193,
+    "sp_remaining": 40,
+    "total_tasks": 112,
+    "total_commits": 316,
+    "sprints_count": 3
+  },
+  "epics": [
+    {"id": 1, "name": "Infraestrutura e Ambiente", "sp": 24, "stories": 4, "done": 4},
+    {"id": 2, "name": "Autenticacao e Seguranca", "sp": 26, "stories": 5, "done": 5},
+    {"id": 3, "name": "Gestao Academica", "sp": 78, "stories": 13, "done": 13},
+    {"id": 4, "name": "MCP Server", "sp": 32, "stories": 5, "done": 5},
+    {"id": 5, "name": "AI Service (LangChain + RAG)", "sp": 37, "stories": 5, "done": 4},
+    {"id": 6, "name": "WhatsApp Webhook", "sp": 24, "stories": 5, "done": 5},
+    {"id": 7, "name": "Frontend Mobile", "sp": 16, "stories": 3, "done": 0},
+    {"id": 8, "name": "Guardrails e Seguranca", "sp": 8, "stories": 2, "done": 0},
+    {"id": 9, "name": "Deploy e Operacoes", "sp": 10, "stories": 2, "done": 0},
+    {"id": 10, "name": "Testes", "sp": 8, "stories": 3, "done": 1}
+  ],
+  "sprints": {
+    "sprint_1": {
+      "name": "Sprint 1 — Planejamento",
+      "start": "2026-04-08",
+      "end": "2026-04-23",
+      "goal": "Definir escopo, requisitos, arquitetura e 44 plans de execucao detalhados",
+      "total_sp": 0,
+      "type": "planning",
+      "deliverables": [
+        {"date": "2026-04-08", "item": "Repositorio criado", "commits": 1},
+        {"date": "2026-04-13", "item": "Planejamento inicial", "commits": 1},
+        {"date": "2026-04-14", "item": "Revisao do planejamento", "commits": 1},
+        {"date": "2026-04-15", "item": "Requisitos + Roadmap", "commits": 7},
+        {"date": "2026-04-20", "item": "Contexto 6 fases", "commits": 8},
+        {"date": "2026-04-22", "item": "Contexto fases 5-6", "commits": 2},
+        {"date": "2026-04-23", "item": "44 plans + validacao", "commits": 19}
+      ]
+    },
+    "sprint_2": {
+      "name": "Sprint 2 — Execucao",
+      "start": "2026-04-23",
+      "end": "2026-04-30",
+      "goal": "Backend completo + AI Service + MCP Server + WhatsApp Webhook funcional em Docker",
+      "total_sp": 193,
+      "type": "execution",
+      "burndown": [
+        {"date": "2026-04-23", "remaining": 193, "ideal": 193, "label": "23"},
+        {"date": "2026-04-24", "remaining": 89, "ideal": 169, "label": "24"},
+        {"date": "2026-04-25", "remaining": 19, "ideal": 145, "label": "25"},
+        {"date": "2026-04-26", "remaining": 19, "ideal": 121, "label": "26"},
+        {"date": "2026-04-27", "remaining": 6, "ideal": 97, "label": "27"},
+        {"date": "2026-04-28", "remaining": 6, "ideal": 72, "label": "28"},
+        {"date": "2026-04-29", "remaining": 6, "ideal": 48, "label": "29"},
+        {"date": "2026-04-30", "remaining": 0, "ideal": 0, "label": "30"}
+      ]
+    },
+    "sprint_3": {
+      "name": "Sprint 3 — Demonstracao",
+      "start": "2026-05-01",
+      "end": "2026-05-05",
+      "goal": "Sistema demonstravel — frontend minimo + deploy + guardrails + artefatos Scrum",
+      "total_sp": 40,
+      "type": "demo",
+      "burndown": [
+        {"date": "2026-05-01", "remaining": 40, "ideal": 40, "projected": true, "label": "01"},
+        {"date": "2026-05-02", "remaining": 35, "ideal": 32, "projected": true, "label": "02"},
+        {"date": "2026-05-03", "remaining": 22, "ideal": 24, "projected": true, "label": "03"},
+        {"date": "2026-05-04", "remaining": 10, "ideal": 16, "projected": true, "label": "04"},
+        {"date": "2026-05-05", "remaining": 2, "ideal": 0, "projected": true, "label": "05"}
+      ]
+    }
+  },
+  "kanban": {
+    "columns": [
+      {"name": "To Do", "color": "#6B7280", "tasks": 45},
+      {"name": "In Progress", "color": "#F59E0B", "tasks": 0},
+      {"name": "In Review", "color": "#8B5CF6", "tasks": 0},
+      {"name": "Done", "color": "#10B981", "tasks": 59},
+      {"name": "Blocked", "color": "#EF4444", "tasks": 0}
+    ],
+    "sample_tasks": [
+      {"title": "Fix RAG threshold", "status": "todo", "assignee": "Tech Lead", "sp": 3, "epic": "AI Service"},
+      {"title": "Fix MCP UUID", "status": "todo", "assignee": "Tech Lead", "sp": 2, "epic": "MCP Server"},
+      {"title": "Flutter login screen", "status": "todo", "assignee": "Membro 1", "sp": 5, "epic": "Frontend"},
+      {"title": "Flutter dashboard", "status": "todo", "assignee": "Membro 2", "sp": 8, "epic": "Frontend"},
+      {"title": "Knowledge base docs", "status": "todo", "assignee": "Membro 3", "sp": 3, "epic": "AI Service"},
+      {"title": "System prompt hardening", "status": "todo", "assignee": "Membro 4", "sp": 5, "epic": "Guardrails"},
+      {"title": "Deploy servidor", "status": "todo", "assignee": "Tech Lead", "sp": 5, "epic": "Deploy"},
+      {"title": "Docker compose stack", "status": "done", "assignee": "Tech Lead", "sp": 8, "epic": "Infra"},
+      {"title": "Auth OTP + JWT", "status": "done", "assignee": "Tech Lead", "sp": 16, "epic": "Auth"},
+      {"title": "35 REST endpoints", "status": "done", "assignee": "Tech Lead", "sp": 78, "epic": "Backend"},
+      {"title": "16 MCP tools", "status": "done", "assignee": "Tech Lead", "sp": 32, "epic": "MCP"},
+      {"title": "ReAct agent + RAG", "status": "done", "assignee": "Tech Lead", "sp": 34, "epic": "AI"},
+      {"title": "WhatsApp webhook E2E", "status": "done", "assignee": "Tech Lead", "sp": 24, "epic": "Webhook"}
+    ]
+  },
+  "dod_summary": [
+    "Codigo funcional (nao quebra o build)",
+    "Segue convencoes do projeto (PEP 8 / flutter_lints)",
+    "Testado manualmente (evidencia)",
+    "Sem regressoes em funcionalidades existentes",
+    "Sem secrets hardcoded",
+    "Commitado com mensagem descritiva",
+    "Funciona no ambiente Docker local"
+  ],
+  "velocity": {
+    "sprint_1_type": "planning",
+    "sprint_1_days": 16,
+    "sprint_2_sp": 193,
+    "sprint_2_days": 8,
+    "sprint_2_velocity": 24.1,
+    "sprint_3_sp_planned": 40,
+    "sprint_3_days": 5,
+    "sprint_3_members": 6
+  },
+  "retro": {
+    "start": ["Daily standups via texto", "Pair programming", "Roteiro de demo antecipado"],
+    "stop": ["UAT so no final", "Trabalho centralizado em 1 pessoa", "Threshold hardcoded"],
+    "continue": ["Planejamento detalhado antes de codar", "Docker desde o dia 1", "Vertical slice architecture"]
+  }
+}
